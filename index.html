@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Suchita Portfolio</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Suchita <span>Nilange</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#Home">Home</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="main-container">
+            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="suchitanilange.jpg" alt="">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Suchita</span></h1>
+                <div class="FRONTEND DEVELOPER" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">"Hi, I'm a passionate web developer and tech enthusiast with expertise in crafting interactive
+                    and responsive websites. I specialize in HTML, CSS, JavaScript, and C++, blending creativity with technical
+                    skills to deliver innovative solutions. Dedicated to continuous learning, I aim to make a lasting 
+                    impact through my work."</p>
+                <div class="social-links">
+                    <a href="https://github.com/Suchita30" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/suchita-nilange-11b176259/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
+                    <button>Hire me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills"> 
+        <!-- Left Section: Technical Skills -->
+        <div class="skills-section">
+            <h1>Technical Skills</h1>
+            <div class="Technical-bars">
+                <div class="bar">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" alt="HTML">
+                    <div class="progress-bar">
+                        <span class="html"></span>
+                    </div>
+                    <p>HTML</p>
+                </div>
+                <div class="bar">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" alt="CSS">
+                    <div class="progress-bar">
+                        <span class="css"></span>
+                    </div>
+                    <p>CSS</p>
+                </div>
+                <div class="bar">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/027/127/463/small_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="JavaScript">
+                    <div class="progress-bar">
+                        <span class="js"></span>
+                    </div>
+                    <p>JavaScript</p>
+                </div>
+                <div class="bar">
+                    <img src="https://w7.pngwing.com/pngs/46/626/png-transparent-c-logo-the-c-programming-language-computer-icons-computer-programming-source-code-programming-miscellaneous-template-blue.png" alt="C++">
+                    <div class="progress-bar">
+                        <span class="cpp"></span>
+                    </div>
+                    <p>C++</p>
+                </div>
+                <div class="bar">
+                    <img src="https://cdn-icons-png.flaticon.com/512/9118/9118438.png" alt="Data Structures">
+                    <div class="progress-bar">
+                        <span class="ds"></span>
+                    </div>
+                    <p>Data Structures</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section: Professional Skills -->
+        <div class="skills-section">
+            <h1>Professional Skills</h1>
+            <div class="Professional-bars">
+                <div class="circle-row">
+                    <div class="circle" style="--percentage: 85">
+                        <span>85%</span>
+                        <p>Communication</p>
+                    </div>
+                    <div class="circle" style="--percentage: 75">
+                        <span>75%</span>
+                        <p>Teamwork</p>
+                    </div>
+                </div>
+                <div class="circle-row">
+                    <div class="circle" style="--percentage: 90">
+                        <span>90%</span>
+                        <p>Problem Solving</p>
+                    </div>
+                    <div class="circle" style="--percentage: 80">
+                        <span>80%</span>
+                        <p>Time Management</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+</section>
+    <hr style="width: 100%;
+     border: 1.5px solid #077b32; /* Match the line with your theme color */
+     margin: 0px auto; /* Center the line and add space around it */"> 
+    <section id="projects">
+        <h1>Projects</h1>
+        <div class="project-container">
+            <div class="project-card">
+                <img src="https://w0.peakpx.com/wallpaper/60/506/HD-wallpaper-beauty-salon-vectors-stock-psd-beautician.jpg" alt="Makeup and Salon Project">
+                <h2>Makeup and Salon Project</h2>
+                <p>An interactive website for a makeup and salon business, featuring online booking, service lists, and gallery sections to attract clients.</p>
+            </div>
+            <div class="project-card">
+                <img src="https://png.pngtree.com/thumb_back/fh260/background/20230424/pngtree-full-grocery-store-display-full-of-different-types-of-fruits-and-image_2558583.jpg" alt="Grocery Website">
+                <h2>Grocery Website</h2>
+                <p>A fully functional e-commerce website for groceries with features like product categorization, cart management, and secure checkout.</p>
+            </div>
+            <div class="project-card">
+                <img src="https://htoindia.com/wp-content/uploads/2017/07/UNESCO-world-heritage-sites-india.jpg" alt="Heritage Explore in India">
+                <h2>Heritage Explore in India</h2>
+                <p>A vibrant website showcasing India's cultural heritage with interactive maps, historical facts, and image galleries.</p>
+            </div>
+        </div>
+    </section>
+     <hr style="width: 100%;
+     border: 1.5px solid #077b32; /* Match the line with your theme color */
+     margin: 0px auto; /* Center the line and add space around it */"> 
+    
+    <section id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h1>About Me</h1>
+                <p>
+                    Hello! I'm a passionate web developer and aspiring technologist with a knack for creating visually stunning and user-friendly websites. 
+                    With a strong foundation in <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, and <b>C++</b>, I bring innovative ideas to life while ensuring 
+                    functionality and responsiveness. My recent projects, including the <i>Heritage Explorer in India</i> and <i>Makeup & Salon</i> website, showcase 
+                    my ability to merge creativity with technical expertise.
+                </p>
+                <p>
+                    I am dedicated to continuous learning, improving my problem-solving skills, and crafting designs that leave a lasting impression. 
+                    Whether it's coding, brainstorming creative solutions, or collaborating with a team, I thrive in dynamic and challenging environments.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="aboutme.jpg" alt="About Me">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> nilangesuchita@gmail.com</p>
+                <p><i class="fa-solid fa-mobile-alt"></i> <strong>Phone:</strong>+91 7249007501</p>
+                <p><i class="fa-solid fa-map-marker-alt"></i> <strong>Location:</strong> Nanded, Maharashtra, India</p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/Suchita30" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/yourprofile" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/suchita-nilange-11b176259/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instggram.com/instagram" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fa-brands fa-instagram"></i></a> 
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+<footer id="footer">
+    <div class="footer-container">
+        <div class="footer-text">
+            <p>&copy; 2024 Portfolio. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#technical skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About me</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</footer>
+
+    
+    
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ offset: 0 });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

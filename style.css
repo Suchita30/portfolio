@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    overflow-x: hidden; /* Allow scrolling but prevent horizontal overflow */
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: black; /* Ensure navbar visibility when scrolling */
+}
+
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo span{
+    color: #077b32;
+    text-shadow: 0 0 10px #077b32;
+}
+
+.hamburg,
+.cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    display: none;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+
+.nav-container .links{
+    display: flex;
+}
+
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #077b32;
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+
+.nav-container .links a:hover{
+    color: #077b32;
+}
+
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow:  0 0 20px black;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a:hover{
+    background-color: #077b32;
+}
+
+section {
+    width: 100%;
+    min-height: 90vh;
+    padding: 20px;
+    color: white;
+}
+
+
+.main-container {
+    width: 100%;
+    height: auto; /* Allow flexible height for scrolling */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap; /* Support smaller screens */
+    padding: 20px 0;
+}
+
+.main-container .image{
+    width: 500px;
+    height: 80vh;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 50px #077b32;
+}
+
+.main-container .image img{
+    width: 100%;
+}
+
+.main-container .image:hover{
+    animation: animate 1.5s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%{
+        scale: 1;
+    }
+    
+    50%{
+        scale: 1.05;
+    }
+    
+    100%{
+        scale: 1;
+    }
+}
+
+.main-container .content{
+    color: white;
+    width: 40%;
+    min-height: 100px;
+}
+
+.content h1{
+    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+}
+
+.content h1 span{
+    color: #077b32;
+    text-shadow: 0  0 10px #077b32;
+}
+
+.content .typewriter{
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-weight: 600;
+}
+
+.content .typewriter-text{
+    color: #077b32;
+    text-shadow: 0 0 10px #077b32;
+}
+
+.content p{
+    font-size: clamp(0.4rem , 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center; /* Align items horizontally in the center */
+    align-items: center; /* Align items vertically in the center */
+    gap: 10px; /* Space between the icons */
+}
+
+.social-links i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid #077b32;
+    border-radius: 50%;
+    color: #077b32;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+    margin: 0; /* Remove extra margin */
+}
+
+.social-links i:hover {
+    background-color: #077b32;
+    color: white;
+    transform: scale(1.1); /* Optional: hover effect to make icons a bit larger */
+}
+
+.content button{
+    width: 50%;
+    height: 6vh;
+    margin: 30px;
+    background-color: #077b32;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 120%;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.content button:hover{
+    scale: 1.1;
+    color: #077b32;
+    border: 2px solid #077b32;
+    background-color: transparent;
+    font-weight: 700;
+    box-shadow: 0 0 40px #077b32;
+}
+
+
+@media (max-width:884px) {
+    nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-container .links{
+        display: none;
+    }
+
+    .hamburg,
+    .cancel{
+        display: block;
+    }
+
+    .main-container .content{
+        width: 80%;
+    }
+
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .main-container .image{
+        z-index: -1;
+        width: 50%;
+        height: 60%;
+    }
+}
+
+@media (max-width:440px){
+    .main-container .image{
+        width: 50%;
+        height: 60%;
+        margin-bottom: 0px;
+    }
+
+    .main-container .content{
+        width: 80%;
+    }
+
+    .main-container button{
+        margin-top: 15px;
+    }
+}
+
+#skills {
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills-section {
+    width: 45%;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    
+}
+
+.skills-section h1 {
+    font-size: 1.8rem;
+    color: #077b32;
+    text-shadow: 0 0 10px #077b32;
+    margin-bottom: 20px;
+}
+
+.Technical-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.Technical-bars .bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Technical-bars .bar img {
+    width: 30px;
+    height: 30px;
+}
+
+.Technical-bars .bar .progress-bar {
+    width: 80%;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+}
+
+.Technical-bars .bar .progress-bar span {
+    display: block;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    background-color: #077b32;
+    animation: load-bar 2s ease-out;
+}
+
+.Technical-bars .bar span.html {
+    width: 90%;
+}
+
+.Technical-bars .bar span.css {
+    width: 80%;
+}
+
+.Technical-bars .bar span.js {
+    width: 70%;
+}
+
+.Technical-bars .bar span.cpp {
+    width: 85%;
+}
+
+.Technical-bars .bar span.ds {
+    width: 75%;
+}
+
+@keyframes load-bar {
+    from {
+        width: 0;
+    }
+    to {
+        width: inherit;
+    }
+}
+
+.Professional-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.circle-row {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(#077b32 calc(var(--percentage) * 1%), white 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #077b32;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.circle span {
+    position: absolute;
+    color: white;
+}
+
+.circle p {
+    margin-top: 130px;
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+}
+
+#projects {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: black;
+    text-align: center;
+}
+
+#projects h1 {
+    font-size: 2rem;
+    color: #077b32;
+    text-shadow: 0 0 10px #077b32;
+    margin-bottom: 30px;
+    text-align: left; /* Align project section heading to the left */
+    padding-left: 20px; /* Add space from the left */
+}
+
+.project-container {
+    display: flex;
+    justify-content: flex-start; /* Align cards to the left */
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-left: 20px; /* Add space from the left */
+}
+
+.project-card {
+    width: 280px;
+    height: 350px; /* Reduced height of the cards */
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: 150px; /* Reduced height of the image */
+    object-fit: cover;
+}
+
+.project-card h2 {
+    font-size: 1.4rem;
+    color: #077b32;
+    margin: 10px 15px; /* Adjusted margins for left alignment */
+}
+
+.project-card p {
+    font-size: 0.95rem; /* Slightly smaller text */
+    color: #555;
+    padding: 0 15px 15px 15px; /* Adjust padding for better alignment */
+}
+
+#about {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: left;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 550px;
+}
+
+.about-text h1 {
+    font-size: 2rem;
+    color: #077b32;
+    text-shadow: 0 0 10px #077b32;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-text b {
+    color: #077b32;
+}
+
+.about-text i {
+    font-style: italic;
+    color: #333;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 300px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensures the image covers the area while maintaining its aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#contact {
+    width: 100%;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: black;
+    border-top: 3px solid #077b32;
+}
+
+#contact h1 {
+    font-size: 2.5rem;
+    color: #077b32;
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px #077b32;
+    letter-spacing: 1px;
+    text-align: left; /* Align project section heading to the left */
+    padding-left: 20px; /* Add space from the left */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.contact-info {
+    width: 40%;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: left;
+}
+
+.contact-info p {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #077b32;
+    font-size: 1.4rem;
+}
+
+.social-links {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: #077b32;
+    font-size: 2rem;
+    transition: transform 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    color: #006400;
+}
+
+.social-links i {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links i:hover {
+    color: #006400;
+    transform: rotate(15deg);
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        width: 100%;
+        text-align: center;
+    }
+    .social-links {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Footer Styles */
+#footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.footer-text p {
+    font-size: 1rem;
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #077b32;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
